@@ -1,6 +1,39 @@
-import java.util.scanner;
+import java.util.Scanner;
 
-public sclass SumaResta{
-  public static void main}
-    Scanner scanner = new scanner{
+public class SumaRestar {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicitar los dos nmeros al usuario
+        System.out.print("Ingrese el primer nmero: ");
+        double num1 = scanner.nextDouble();
+        
+        System.out.print("Ingrese el segundo nmero: ");
+        double num2 = scanner.nextDouble();
+        
+        // Realizar las operaciones
+        double suma = num1 + num2;
+        double resta = num1 - num2;
+        double multiplicacion = num1 * num2;
+        double division = 0;
+        
+        // Verificar divisin por cero
+        if (num2 != 0) {
+            division = num1 / num2;
+        } else {
+            System.out.println("Error: No se puede dividir por cero");
+        }
+        
+        // Mostrar resultados
+        System.out.println("\nResultados:");
+        System.out.println("Suma: " + num1 + " + " + num2 + " = " + suma);
+        System.out.println("Resta: " + num1 + " - " + num2 + " = " + resta);
+        System.out.println("Multiplicacin: " + num1 + " * " + num2 + " = " + multiplicacion);
+        
+        if (num2 != 0) {
+            System.out.println("Divisin: " + num1 + " / " + num2 + " = " + division);
+        }
+        
+        scanner.close();
+    }
 }
